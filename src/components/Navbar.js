@@ -1,8 +1,8 @@
-const Navbar = () => {
+const Navbar = ({setPage}) => {
     return ( 
         <nav>
-            <button type="">Planets</button>
-            <button type="">People</button>
+            <button onClick={() => setPage('planets')}>Planets</button>
+            <button onClick={() => setPage('people')}>People</button>
         </nav>
      );
 }
