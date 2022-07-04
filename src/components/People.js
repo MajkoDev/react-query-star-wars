@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery } from "react-query";
-
+import Person from "./Person";
 
 // async function
 const fetchPeople = async () => {
@@ -23,7 +23,10 @@ const People = () => {
   if (status === "success") {
     return (
       <div>
-        
+        <h2>People</h2>
+        {data.results.map((people) => (
+          <Person key={people.name} people={people} />
+        ))}
       </div>
     );
   }

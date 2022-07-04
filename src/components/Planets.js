@@ -23,6 +23,7 @@ const Planets = () => {
   if (status === "success") {
     return (
       <div>
+        <h2>Planets</h2>
         {data.results.map((planet) => (
           <Planet key={planet.name} planet={planet} />
         ))}
