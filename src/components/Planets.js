@@ -3,14 +3,12 @@ import { useQuery } from "react-query";
 import Planet from "./Planet";
 
 const Planets = () => {
-  const [page, setPage] = useState(2);
+  const [page, setPage] = useState(1);
 
   const { status, data } = useQuery(["planets", { page }], async () => {
     const res = await fetch("http://swapi.dev/api/planets/?page=" + page);
     return res.json();
   });
-
-  
 
   if (status === "loading") {
     return <span>Loading...</span>;

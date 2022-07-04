@@ -19,6 +19,7 @@ const People = () => {
   }
 
   if (status === "success") {
+    
     return (
       <div>
         <h2>People</h2>
