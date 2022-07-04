@@ -1,5 +1,6 @@
 import React from "react";
 import { useQuery } from "react-query";
+import Planet from "./Planet";
 
 // async function
 const fetchPlanets = async () => {
@@ -20,11 +21,14 @@ const Planets = () => {
   }
 
   if (status === "success") {
-    return( <div>
-        {data.results.map(planet => <div>{planet.name}</div>)}
-    </div>)
+    return (
+      <div>
+        {data.results.map((planet) => (
+          <Planet key={planet.name} planet={planet} />
+        ))}
+      </div>
+    );
   }
-
 };
 
 export default Planets;

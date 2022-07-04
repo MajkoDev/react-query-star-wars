@@ -6,18 +6,18 @@ body {
   text-align: center;
 }
 
-.App{
+.App {
   width: 90%;
   margin: 0 auto;
 }
 
-h1{
+h1 {
   color: yellow;
   font-size: 3em;
   letter-spacing: 1.5px;
 }
 
-button{
+button {
   margin: 0 10px;
   background: transparent;
   border: 2px solid #ccc;
@@ -27,11 +27,28 @@ button{
   cursor: pointer;
 }
 
-button:hover{
+button:hover {
   color: #fff;
   border-color: #fff;
 }
 
-.content{
+.content {
   text-align: left;
+}
+
+.card {
+  padding: 4px 8px;
+  background-color: #1b1b1b;
+  margin: 8px 0;
+  border-radius: 10px;
+}
+
+.card p {
+  margin: 3px 0;
+  color: #999;
+}
+
+.card h3 {
+  margin: 5px 0;
+  color: #ffff57;
 }
