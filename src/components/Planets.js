@@ -7,9 +7,10 @@ const Planets = () => {
 
   const { status, data } = useQuery(["planets", { page }], async () => {
     const res = await fetch("http://swapi.dev/api/planets/?page=" + page);
-
     return res.json();
   });
+
+  
 
   if (status === "loading") {
     return <span>Loading...</span>;
